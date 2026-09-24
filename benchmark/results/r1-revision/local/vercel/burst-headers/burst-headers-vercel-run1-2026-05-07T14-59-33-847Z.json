@@ -1,0 +1,279 @@
+{
+  "setup_data": {
+    "startTime": 1778165763787
+  },
+  "root_group": {
+    "name": "",
+    "path": "",
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": [],
+    "checks": [
+        {
+          "id": "6210a8cd14cd70477eba5c5e4cb3fb5f",
+          "passes": 74154,
+          "fails": 8641,
+          "name": "status is 200",
+          "path": "::status is 200"
+        },
+        {
+          "passes": 74154,
+          "fails": 8641,
+          "name": "response valid",
+          "path": "::response valid",
+          "id": "78f38f1589bd6f729db1eca1737e2fa8"
+        }
+      ]
+  },
+  "options": {
+    "summaryTrendStats": [
+      "avg",
+      "min",
+      "med",
+      "max",
+      "p(90)",
+      "p(95)"
+    ],
+    "summaryTimeUnit": "",
+    "noColor": false
+  },
+  "state": {
+    "isStdOutTTY": false,
+    "isStdErrTTY": false,
+    "testRunDurationMs": 213168.5692
+  },
+  "metrics": {
+    "successful_requests": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "rate": 347.8655426468003,
+        "count": 74154
+      }
+    },
+    "http_req_waiting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(95)": 122.656045,
+        "avg": 93.83666889130446,
+        "min": 66.0606,
+        "med": 90.24345,
+        "max": 1684.009,
+        "p(90)": 103.96997000000002
+      }
+    },
+    "checks": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0.8956337943112507,
+        "passes": 148308,
+        "fails": 17282
+      }
+    },
+    "iteration_duration": {
+      "contains": "time",
+      "values": {
+        "med": 194.9863,
+        "max": 2005.9666,
+        "p(90)": 274.94262000000003,
+        "p(95)": 286.23848,
+        "avg": 195.72881536203974,
+        "min": 68.9872
+      },
+      "type": "trend"
+    },
+    "vus_max": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 200,
+        "min": 200,
+        "max": 200
+      }
+    },
+    "data_sent": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 3866530,
+        "rate": 18138.368214932878
+      }
+    },
+    "error_rate": {
+      "contains": "default",
+      "values": {
+        "rate": 0.10436620568874933,
+        "passes": 8641,
+        "fails": 74154
+      },
+      "thresholds": {
+        "rate<0.05": {
+          "ok": false
+        }
+      },
+      "type": "rate"
+    },
+    "iterations": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 82795,
+        "rate": 388.4015373876235
+      }
+    },
+    "http_req_duration": {
+      "thresholds": {
+        "p(95)<1500": {
+          "ok": true
+        },
+        "p(99)<3000": {
+          "ok": true
+        }
+      },
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(95)": 123.69075000000001,
+        "avg": 94.27648048067552,
+        "min": 66.0606,
+        "med": 90.54075,
+        "max": 1684.009,
+        "p(90)": 104.56692000000001
+      }
+    },
+    "http_req_duration{expected_response:true}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(95)": 127.35021999999998,
+        "avg": 96.88732977116678,
+        "min": 81.7947,
+        "med": 91.1451,
+        "max": 1684.009,
+        "p(90)": 106.56878
+      }
+    },
+    "http_req_blocked": {
+      "contains": "time",
+      "values": {
+        "max": 673.0275,
+        "p(90)": 0,
+        "p(95)": 0,
+        "avg": 0.39209787801932383,
+        "min": 0,
+        "med": 0
+      },
+      "type": "trend"
+    },
+    "data_received": {
+      "contains": "data",
+      "values": {
+        "count": 71978797,
+        "rate": 337661.39759782184
+      },
+      "type": "counter"
+    },
+    "http_req_failed": {
+      "thresholds": {
+        "rate<0.05": {
+          "ok": false
+        }
+      },
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0.10435990338164251,
+        "passes": 8641,
+        "fails": 74159
+      }
+    },
+    "latency_by_stage": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "max": 1684.009,
+        "p(90)": 106.56761999999999,
+        "p(95)": 127.34951,
+        "avg": 96.86793035439702,
+        "min": 81.7947,
+        "med": 91.145
+      }
+    },
+    "vus": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 1,
+        "min": 0,
+        "max": 199
+      }
+    },
+    "http_req_tls_handshaking": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 0.3722385108695653,
+        "min": 0,
+        "med": 0,
+        "max": 616.7703,
+        "p(90)": 0,
+        "p(95)": 0
+      }
+    },
+    "http_req_receiving": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 0.42640447101449225,
+        "min": 0,
+        "med": 0,
+        "max": 492.6873,
+        "p(90)": 0.9713200000000012,
+        "p(95)": 1.5042050000000002
+      }
+    },
+    "http_reqs": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 82800,
+        "rate": 388.42499300314296
+      }
+    },
+    "http_req_sending": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 0.013407118357487906,
+        "min": 0,
+        "med": 0,
+        "max": 7.0423,
+        "p(90)": 0,
+        "p(95)": 0
+      }
+    },
+    "http_req_connecting": {
+      "values": {
+        "avg": 0.01903304347826087,
+        "min": 0,
+        "med": 0,
+        "max": 56.2572,
+        "p(90)": 0,
+        "p(95)": 0
+      },
+      "type": "trend",
+      "contains": "time"
+    }
+  },
+  "testMetadata": {
+    "type": "burst-headers",
+    "platform": "vercel",
+    "runNumber": "1",
+    "timestamp": "2026-05-07T14:59:33.848Z",
+    "endpoint": "https://vercel-edge-murex.vercel.app",
+    "symbol": "BTCUSDT",
+    "interval": "1h",
+    "note": "Per-request header data in stdout HDR: lines; parse with raw-trace-isolate-analyzer.py"
+  }
+}

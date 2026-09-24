@@ -1,0 +1,21 @@
+{
+  "name": "cloudflare-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for crypto analytics benchmark",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "build": "echo 'Build handled by wrangler'"
+  },
+  "dependencies": {
+    "@crypto-benchmark/shared": "*"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231218.0",
+    "typescript": "^5.3.0",
+    "wrangler": "^3.22.0"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "endpoints": {
+    "cloudflare": {
+      "name": "Cloudflare Workers",
+      "url": "${CF_WORKER_URL}",
+      "healthPath": "/health",
+      "analyticsPath": "/api/crypto-analytics"
+    },
+    "lambda": {
+      "name": "AWS Lambda@Edge",
+      "url": "${LAMBDA_URL}",
+      "healthPath": "/health",
+      "analyticsPath": "/api/crypto-analytics"
+    }
+  },
+  "testParams": {
+    "symbol": "BTCUSDT",
+    "interval": "1h"
+  },
+  "scenarios": {
+    "coldStart": {
+      "description": "Measure cold start latency",
+      "vus": 1,
+      "iterations": 10,
+      "delay": "5m"
+    },
+    "warmPerformance": {
+      "description": "Measure warm performance",
+      "vus": 1,
+      "iterations": 1000
+    },
+    "loadTest": {
+      "description": "Sustained load test",
+      "vus": 50,
+      "duration": "5m"
+    },
+    "burstTest": {
+      "description": "Burst/spike test",
+      "stages": [
+        { "duration": "30s", "target": 10 },
+        { "duration": "1m", "target": 100 },
+        { "duration": "30s", "target": 200 },
+        { "duration": "1m", "target": 50 },
+        { "duration": "30s", "target": 0 }
+      ]
+    }
+  },
+  "thresholds": {
+    "http_req_duration": ["p(95)<500", "p(99)<1000"],
+    "http_req_failed": ["rate<0.01"]
+  }
+}

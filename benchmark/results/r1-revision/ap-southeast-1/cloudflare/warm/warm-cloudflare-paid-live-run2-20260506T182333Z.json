@@ -1,0 +1,272 @@
+{
+  "root_group": {
+    "name": "",
+    "path": "",
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": [],
+    "checks": [
+        {
+          "name": "status is 200",
+          "path": "::status is 200",
+          "id": "6210a8cd14cd70477eba5c5e4cb3fb5f",
+          "passes": 1000,
+          "fails": 0
+        },
+        {
+          "passes": 0,
+          "fails": 1000,
+          "name": "response has data",
+          "path": "::response has data",
+          "id": "b3ae2ef92631fad2b4b40f55213052d8"
+        },
+        {
+          "path": "::not cold start",
+          "id": "aa495c32a02bcf2fe9b3f034727f8253",
+          "passes": 0,
+          "fails": 1000,
+          "name": "not cold start"
+        }
+      ]
+  },
+  "options": {
+    "noColor": false,
+    "summaryTrendStats": [
+      "avg",
+      "min",
+      "med",
+      "max",
+      "p(90)",
+      "p(95)"
+    ],
+    "summaryTimeUnit": ""
+  },
+  "state": {
+    "testRunDurationMs": 120598.351223,
+    "isStdOutTTY": false,
+    "isStdErrTTY": false
+  },
+  "metrics": {
+    "iterations": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 1000,
+        "rate": 8.291987327014835
+      }
+    },
+    "http_req_tls_handshaking": {
+      "contains": "time",
+      "values": {
+        "p(95)": 0,
+        "avg": 0.024082942574257422,
+        "min": 0,
+        "med": 0,
+        "max": 15.3052,
+        "p(90)": 0
+      },
+      "type": "trend"
+    },
+    "http_req_waiting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(90)": 16.7833095,
+        "p(95)": 18.4282799,
+        "avg": 14.179726891089093,
+        "min": 8.193653,
+        "med": 13.693686,
+        "max": 50.402076
+      }
+    },
+    "error_rate": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 1,
+        "passes": 1000,
+        "fails": 0
+      },
+      "thresholds": {
+        "rate<0.01": {
+          "ok": false
+        }
+      }
+    },
+    "http_reqs": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 1010,
+        "rate": 8.374907200284984
+      }
+    },
+    "vus_max": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 1,
+        "min": 1,
+        "max": 1
+      }
+    },
+    "data_received": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 502150,
+        "rate": 4163.8214362604995
+      }
+    },
+    "data_sent": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 39567,
+        "rate": 328.089062567996
+      }
+    },
+    "http_req_connecting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 0.0033986128712871285,
+        "min": 0,
+        "med": 0,
+        "max": 1.759751,
+        "p(90)": 0,
+        "p(95)": 0
+      }
+    },
+    "http_req_failed": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "passes": 0,
+        "fails": 1010,
+        "rate": 0
+      }
+    },
+    "http_req_duration{expected_response:true}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "med": 13.883790000000001,
+        "max": 50.56012,
+        "p(90)": 16.947743799999998,
+        "p(95)": 18.6492005,
+        "avg": 14.36575512376238,
+        "min": 8.372622
+      }
+    },
+    "iteration_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 115.37340415199989,
+        "min": 109.257699,
+        "med": 114.88387549999999,
+        "max": 151.381915,
+        "p(90)": 118.12712520000001,
+        "p(95)": 119.6823792
+      }
+    },
+    "checks": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0.3333333333333333,
+        "passes": 1000,
+        "fails": 2000
+      }
+    },
+    "vus": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 1,
+        "min": 0,
+        "max": 1
+      }
+    },
+    "total_requests": {
+      "contains": "default",
+      "values": {
+        "rate": 8.291987327014835,
+        "count": 1000
+      },
+      "type": "counter"
+    },
+    "http_req_duration": {
+      "thresholds": {
+        "p(50)<200": {
+          "ok": true
+        },
+        "p(95)<500": {
+          "ok": true
+        },
+        "p(99)<1000": {
+          "ok": true
+        }
+      },
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "min": 8.372622,
+        "med": 13.883790000000001,
+        "max": 50.56012,
+        "p(90)": 16.947743799999998,
+        "p(95)": 18.6492005,
+        "avg": 14.36575512376238
+      }
+    },
+    "http_req_sending": {
+      "contains": "time",
+      "values": {
+        "p(95)": 0.11932084999999999,
+        "avg": 0.0888023455445545,
+        "min": 0.057287,
+        "med": 0.08337,
+        "max": 0.392037,
+        "p(90)": 0.1042687
+      },
+      "type": "trend"
+    },
+    "http_req_blocked": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 0.029359096039604037,
+        "min": 0.000439,
+        "med": 0.000549,
+        "max": 18.004771,
+        "p(90)": 0.0009512,
+        "p(95)": 0.0010913999999999997
+      }
+    },
+    "http_req_receiving": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "med": 0.08538200000000001,
+        "max": 3.212018,
+        "p(90)": 0.1160912,
+        "p(95)": 0.13301054999999998,
+        "avg": 0.09722588712871297,
+        "min": 0.061543
+      }
+    }
+  },
+  "setup_data": {
+    "startTime": 1778091819187
+  },
+  "testMetadata": {
+    "type": "warm-performance",
+    "platform": "cloudflare",
+    "runNumber": "2",
+    "timestamp": "2026-05-06T18:25:34.626Z",
+    "endpoint": "https://crypto-analytics-worker.8ndwvxvrgt.workers.dev?symbol=BTCUSDT&interval=1h&mockData=false",
+    "symbol": "BTCUSDT",
+    "interval": "1h"
+  },
+  "rawLatencies": []
+}

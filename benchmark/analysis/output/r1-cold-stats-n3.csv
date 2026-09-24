@@ -1,0 +1,15 @@
+client,platform,mode,n_runs,avg_mean_ms,ci95_low_ms,ci95_high_ms,p95_mean_ms
+ap-southeast-1,cloudflare,live,3,11.473,11.473,9.926,18.871
+ap-southeast-1,cloudflare,mock,7,10.77,10.77,9.267,15.553
+ap-southeast-1,vercel,live,3,20.161,20.161,11.379,45.779
+ap-southeast-1,vercel,mock,7,14.634,14.634,11.565,24.18
+eu-west-1,cloudflare,live,3,8.435,8.435,5.914,12.751
+eu-west-1,cloudflare,mock,7,7.206,7.206,6.708,9.154
+eu-west-1,vercel,live,3,22.365,22.365,13.599,55.47
+eu-west-1,vercel,mock,7,19.244,19.244,12.323,39.681
+local,cloudflare,live,3,38.89,38.89,30.562,49.546
+local,cloudflare,mock,4,43.446,43.446,34.386,69.489
+local,vercel,live,3,104.486,104.486,82.33,140.974
+local,vercel,mock,7,121.862,121.862,83.435,176.354
+us-east-1,cloudflare,mock,7,15.186,15.186,12.677,20.464
+us-east-1,vercel,mock,7,15.9,15.9,14.061,21.063

@@ -1,0 +1,33 @@
+traffic_profile,requests_m,platform,region,region_display,monthly_cost_usd,cost_per_million_usd,avg_latency_ms,cost_latency_product
+1M,1.0,cloudflare,ap-southeast-1,AP-SE-1,5.0,5.0,32.25,161.2648
+1M,1.0,cloudflare,eu-west-1,EU-West-1,5.0,5.0,9.8,49.0028
+1M,1.0,cloudflare,local,VN (local),5.0,5.0,38.56,192.7868
+1M,1.0,cloudflare,us-east-1,US-East-1,5.0,5.0,26.41,132.0503
+1M,1.0,vercel,ap-southeast-1,AP-SE-1,20.0,20.0,3.15,62.9636
+1M,1.0,vercel,eu-west-1,EU-West-1,20.0,20.0,2.87,57.3409
+1M,1.0,vercel,local,VN (local),20.0,20.0,78.73,1574.5533
+1M,1.0,vercel,us-east-1,US-East-1,20.0,20.0,2.55,51.0757
+10M,10.0,cloudflare,ap-southeast-1,AP-SE-1,5.0,0.5,32.25,16.1265
+10M,10.0,cloudflare,eu-west-1,EU-West-1,5.0,0.5,9.8,4.9003
+10M,10.0,cloudflare,local,VN (local),5.0,0.5,38.56,19.2787
+10M,10.0,cloudflare,us-east-1,US-East-1,5.0,0.5,26.41,13.205
+10M,10.0,vercel,ap-southeast-1,AP-SE-1,38.0,3.8,3.15,11.9631
+10M,10.0,vercel,eu-west-1,EU-West-1,38.0,3.8,2.87,10.8948
+10M,10.0,vercel,local,VN (local),38.0,3.8,78.73,299.1651
+10M,10.0,vercel,us-east-1,US-East-1,38.0,3.8,2.55,9.7044
+100M,100.0,cloudflare,ap-southeast-1,AP-SE-1,32.0,0.32,32.25,10.3209
+100M,100.0,cloudflare,eu-west-1,EU-West-1,32.0,0.32,9.8,3.1362
+100M,100.0,cloudflare,local,VN (local),32.0,0.32,38.56,12.3384
+100M,100.0,cloudflare,us-east-1,US-East-1,32.0,0.32,26.41,8.4512
+100M,100.0,vercel,ap-southeast-1,AP-SE-1,218.0,2.18,3.15,6.863
+100M,100.0,vercel,eu-west-1,EU-West-1,218.0,2.18,2.87,6.2502
+100M,100.0,vercel,local,VN (local),218.0,2.18,78.73,171.6263
+100M,100.0,vercel,us-east-1,US-East-1,218.0,2.18,2.55,5.5672
+1B,1000.0,cloudflare,ap-southeast-1,AP-SE-1,302.0,0.302,32.25,9.7404
+1B,1000.0,cloudflare,eu-west-1,EU-West-1,302.0,0.302,9.8,2.9598
+1B,1000.0,cloudflare,local,VN (local),302.0,0.302,38.56,11.6443
+1B,1000.0,cloudflare,us-east-1,US-East-1,302.0,0.302,26.41,7.9758
+1B,1000.0,vercel,ap-southeast-1,AP-SE-1,2018.0,2.018,3.15,6.353
+1B,1000.0,vercel,eu-west-1,EU-West-1,2018.0,2.018,2.87,5.7857
+1B,1000.0,vercel,local,VN (local),2018.0,2.018,78.73,158.8724
+1B,1000.0,vercel,us-east-1,US-East-1,2018.0,2.018,2.55,5.1535

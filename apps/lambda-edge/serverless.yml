@@ -1,0 +1,73 @@
+service: crypto-analytics-lambda
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  memorySize: 128
+  timeout: 5
+  architecture: x86_64
+
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - logs:CreateLogGroup
+            - logs:CreateLogStream
+            - logs:PutLogEvents
+          Resource: "arn:aws:logs:*:*:*"
+
+plugins:
+  - serverless-esbuild
+
+custom:
+  esbuild:
+    bundle: true
+    minify: true
+    sourcemap: false
+    target: node18
+    platform: node
+    format: cjs
+    external:
+      - '@aws-sdk/*'
+
+functions:
+  cryptoAnalytics:
+    handler: src/index.handler
+    events:
+      - http:
+          path: /api/crypto-analytics
+          method: get
+          cors: true
+      - http:
+          path: /health
+          method: get
+          cors: true
+
+  cryptoAnalyticsEdge:
+    handler: src/edge-handler.handler
+    memorySize: 128
+    timeout: 5
+    events:
+      - cloudFront:
+          eventType: viewer-request
+          pathPattern: '/api/crypto-analytics'
+          origin:
+            DomainName: example.com
+            OriginPath: ''
+            CustomOriginConfig:
+              OriginProtocolPolicy: https-only
+
+resources:
+  Outputs:
+    ApiUrl:
+      Description: "API Gateway endpoint URL"
+      Value:
+        Fn::Sub: "https://${ApiGatewayRestApi}.execute-api.${AWS::Region}.amazonaws.com/dev"
+    LambdaEdgeArn:
+      Description: "Lambda@Edge function ARN"
+      Value:
+        Fn::GetAtt: [CryptoAnalyticsEdgeLambdaFunction, Arn]

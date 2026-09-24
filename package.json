@@ -1,0 +1,54 @@
+{
+  "name": "crypto-edge-benchmark",
+  "version": "1.0.0",
+  "description": "A Comparative Benchmark of Edge Deployment Strategies for Crypto Analytics Applications",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "build:shared": "npm run build -w @crypto-benchmark/shared",
+    "dev:worker": "npm run dev -w cloudflare-worker",
+    "dev:vercel": "npm run dev -w @crypto-benchmark/vercel-edge",
+    "deploy:worker": "npm run deploy -w cloudflare-worker",
+    "deploy:vercel": "npm run deploy -w @crypto-benchmark/vercel-edge",
+    "deploy:all": "npm run deploy:worker && npm run deploy:vercel",
+    "benchmark:cold": "k6 run benchmark/k6/scenarios/cold-start.js",
+    "benchmark:cold:improved": "k6 run benchmark/k6/scenarios/cold-start-improved.js",
+    "benchmark:warm": "k6 run benchmark/k6/scenarios/warm-performance.js",
+    "benchmark:load": "k6 run benchmark/k6/scenarios/load-test.js",
+    "benchmark:burst": "k6 run benchmark/k6/scenarios/burst-test.js",
+    "benchmark:all": "node scripts/run-benchmark.js",
+    "benchmark:full": "node scripts/run-full-benchmark.js",
+    "benchmark:cold-start": "node scripts/run-cold-start-benchmark.js",
+    "analyze": "python benchmark/analysis/analyze.py",
+    "analyze:stats": "python benchmark/analysis/statistical_analysis.py",
+    "visualize": "python benchmark/analysis/visualize.py",
+    "visualize:paper": "python benchmark/analysis/visualize_paper.py",
+    "lint": "eslint . --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit -p packages/shared/tsconfig.json && tsc --noEmit -p apps/cloudflare-worker/tsconfig.json && tsc --noEmit -p apps/vercel-edge/tsconfig.json && tsc --noEmit -p apps/lambda-edge/tsconfig.json"
+  },
+  "keywords": [
+    "edge-computing",
+    "benchmark",
+    "crypto-analytics",
+    "cloudflare-workers",
+    "vercel-edge",
+    "serverless"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "eslint": "^8.55.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

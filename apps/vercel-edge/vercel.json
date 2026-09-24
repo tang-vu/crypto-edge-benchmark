@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    { "source": "/health", "destination": "/api/health" },
+    { "source": "/api/crypto-analytics", "destination": "/api/crypto-analytics" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
+      ]
+    }
+  ]
+}

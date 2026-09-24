@@ -1,0 +1,15 @@
+client,platform,mode,n_runs,mean_ms,ci95_low,ci95_high
+local,cloudflare,mock,5,44.9,38.6,53.0
+local,vercel,mock,5,173.7,86.9,270.0
+local,cloudflare,live,3,38.9,30.6,51.9
+local,vercel,live,3,104.5,82.3,143.6
+us-east-1,cloudflare,mock,5,16.2,15.2,17.0
+us-east-1,vercel,mock,5,23.3,16.2,35.5
+eu-west-1,cloudflare,mock,5,7.5,6.8,8.6
+eu-west-1,vercel,mock,5,49.3,14.1,102.2
+eu-west-1,cloudflare,live,3,8.4,5.9,10.4
+eu-west-1,vercel,live,3,22.4,13.6,36.2
+ap-southeast-1,cloudflare,mock,5,19.4,9.0,37.3
+ap-southeast-1,vercel,mock,5,91.1,12.7,244.8
+ap-southeast-1,cloudflare,live,3,11.5,9.9,12.8
+ap-southeast-1,vercel,live,3,20.2,11.4,37.3

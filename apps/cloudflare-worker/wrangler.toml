@@ -1,0 +1,37 @@
+name = "crypto-analytics-worker"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Workers Free tier: 100,000 requests/day
+# Paid tier: 10 million requests/month included
+
+[vars]
+PLATFORM = "cloudflare-worker"
+
+# Development settings
+[dev]
+port = 8787
+
+# Production settings
+# Uncomment and configure for production deployment
+# [env.production]
+# name = "crypto-analytics-worker-prod"
+# route = "your-domain.com/api/*"
+
+# Enable logging for benchmark
+[observability]
+enabled = true
+
+# ---------------------------------------------------------------------------
+# No-op worker for P9.5 framework overhead measurement
+# Deploy with: wrangler deploy --config wrangler.toml --name crypto-analytics-noop --entry src/noop.ts
+# Or: npx wrangler deploy src/noop.ts --name crypto-analytics-noop --compatibility-date 2024-01-01
+# ---------------------------------------------------------------------------
+[[env.noop]]
+name = "crypto-analytics-noop"
+main = "src/noop.ts"
+compatibility_date = "2024-01-01"
+
+[env.noop.vars]
+PLATFORM = "cloudflare-noop"

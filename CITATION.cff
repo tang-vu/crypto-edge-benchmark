@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite the associated article."
+title: "Crypto Edge Benchmark"
+type: software
+authors:
+  - family-names: Tang
+    given-names: Minh Vu
+version: 1.0.0
+repository-code: "https://github.com/tang-vu/crypto-edge-benchmark"
+license: MIT
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Tang
+      given-names: Minh Vu
+  title: "An experimental study of edge deployment strategies for cryptocurrency analytics workloads"
+  journal: Computing
+  year: 2026
+  doi: "10.1007/s00607-026-01734-w"

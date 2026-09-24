@@ -1,0 +1,278 @@
+{
+  "root_group": {
+    "name": "",
+    "path": "",
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": [],
+    "checks": [
+        {
+          "name": "status is 200",
+          "path": "::status is 200",
+          "id": "6210a8cd14cd70477eba5c5e4cb3fb5f",
+          "passes": 1000,
+          "fails": 0
+        },
+        {
+          "passes": 1000,
+          "fails": 0,
+          "name": "ok is true",
+          "path": "::ok is true",
+          "id": "df2350f721729a95e87ee25ca7424c31"
+        }
+      ]
+  },
+  "options": {
+    "summaryTrendStats": [
+      "avg",
+      "min",
+      "med",
+      "max",
+      "p(90)",
+      "p(95)"
+    ],
+    "summaryTimeUnit": "",
+    "noColor": false
+  },
+  "state": {
+    "isStdOutTTY": false,
+    "isStdErrTTY": false,
+    "testRunDurationMs": 152912.5156
+  },
+  "metrics": {
+    "checks": {
+      "contains": "default",
+      "values": {
+        "rate": 1,
+        "passes": 2000,
+        "fails": 0
+      },
+      "type": "rate"
+    },
+    "iteration_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 147.2854248000001,
+        "min": 139.1403,
+        "med": 145.85115000000002,
+        "max": 229.3678,
+        "p(90)": 151.57662000000002,
+        "p(95)": 155.73681
+      }
+    },
+    "vus_max": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 1,
+        "min": 1,
+        "max": 1
+      }
+    },
+    "total_requests": {
+      "contains": "default",
+      "values": {
+        "count": 1000,
+        "rate": 6.5396870627377215
+      },
+      "type": "counter"
+    },
+    "http_req_connecting": {
+      "values": {
+        "p(95)": 0,
+        "avg": 0.06177118811881189,
+        "min": 0,
+        "med": 0,
+        "max": 33.2912,
+        "p(90)": 0
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "http_req_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 46.540511386138654,
+        "min": 36.3582,
+        "med": 45.234399999999994,
+        "max": 81.3113,
+        "p(90)": 50.979510000000005,
+        "p(95)": 54.600114999999995
+      },
+      "thresholds": {
+        "p(50)<100": {
+          "ok": true
+        },
+        "p(95)<300": {
+          "ok": true
+        },
+        "p(99)<600": {
+          "ok": true
+        }
+      }
+    },
+    "http_req_sending": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 0.06659871287128713,
+        "min": 0,
+        "med": 0,
+        "max": 0.6928,
+        "p(90)": 0.34351,
+        "p(95)": 0.41984
+      }
+    },
+    "vus": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "max": 1,
+        "value": 1,
+        "min": 0
+      }
+    },
+    "data_sent": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 41951,
+        "rate": 274.34641196891016
+      }
+    },
+    "http_reqs": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 1010,
+        "rate": 6.605083933365099
+      }
+    },
+    "http_req_receiving": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 0.15834673267326746,
+        "min": 0,
+        "med": 0,
+        "max": 5.2221,
+        "p(90)": 0.6068300000000001,
+        "p(95)": 0.9486899999999991
+      }
+    },
+    "iterations": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 1000,
+        "rate": 6.5396870627377215
+      }
+    },
+    "http_req_duration{expected_response:true}": {
+      "contains": "time",
+      "values": {
+        "max": 81.3113,
+        "p(90)": 50.979510000000005,
+        "p(95)": 54.600114999999995,
+        "avg": 46.540511386138654,
+        "min": 36.3582,
+        "med": 45.234399999999994
+      },
+      "type": "trend"
+    },
+    "http_req_failed": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 1010
+      }
+    },
+    "http_req_tls_handshaking": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "min": 0,
+        "med": 0,
+        "max": 71.4384,
+        "p(90)": 0,
+        "p(95)": 0,
+        "avg": 0.11928049504950494
+      }
+    },
+    "http_req_waiting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 46.315565940594084,
+        "min": 36.3582,
+        "med": 45.00375,
+        "max": 81.3113,
+        "p(90)": 50.652550000000005,
+        "p(95)": 54.42943499999999
+      }
+    },
+    "data_received": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 501269,
+        "rate": 3278.142394251475
+      }
+    },
+    "error_rate": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 1000
+      },
+      "thresholds": {
+        "rate<0.01": {
+          "ok": true
+        }
+      }
+    },
+    "noop_latency_ms": {
+      "values": {
+        "avg": 46.62394040000004,
+        "min": 38.6305,
+        "med": 45.269850000000005,
+        "max": 81.3113,
+        "p(90)": 51.04616,
+        "p(95)": 54.62783499999999
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "http_req_blocked": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 0.31701792079207924,
+        "min": 0,
+        "med": 0,
+        "max": 237.3375,
+        "p(90)": 0,
+        "p(95)": 0
+      }
+    }
+  },
+  "setup_data": {
+    "startTime": 1778166302188
+  },
+  "testMetadata": {
+    "type": "warm-noop",
+    "platform": "cloudflare",
+    "runNumber": "3",
+    "timestamp": "2026-05-07T15:07:29.476Z",
+    "endpoint": "https://crypto-analytics-noop.8ndwvxvrgt.workers.dev",
+    "symbol": "BTCUSDT",
+    "interval": "1h",
+    "totalSamples": 0
+  },
+  "rawLatencies": []
+}

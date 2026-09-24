@@ -1,0 +1,161 @@
+{
+    "metrics": {
+        "iterations": {
+            "count": 1000,
+            "rate": 6.711430651839763
+        },
+        "http_req_waiting": {
+            "p(95)": 46.90268499999999,
+            "avg": 42.40357960396045,
+            "min": 30.2934,
+            "med": 39.647,
+            "max": 612.3475,
+            "p(90)": 43.04018000000001
+        },
+        "http_req_duration": {
+            "min": 30.2934,
+            "med": 39.9039,
+            "max": 612.3475,
+            "p(90)": 43.35739,
+            "p(95)": 47.28916999999999,
+            "avg": 42.676307029702954,
+            "thresholds": {
+                "p(50)<200": false,
+                "p(95)<500": false,
+                "p(99)<1000": false
+            }
+        },
+        "http_req_blocked": {
+            "avg": 0.2907681188118812,
+            "min": 0,
+            "med": 0,
+            "max": 204.3766,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "http_req_duration{expected_response:true}": {
+            "med": 39.9039,
+            "max": 612.3475,
+            "p(90)": 43.35739,
+            "p(95)": 47.28916999999999,
+            "avg": 42.676307029702954,
+            "min": 30.2934
+        },
+        "http_req_sending": {
+            "p(95)": 0.39671,
+            "avg": 0.07173336633663367,
+            "min": 0,
+            "med": 0,
+            "max": 4.6719,
+            "p(90)": 0.33557000000000003
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 1010,
+            "value": 0
+        },
+        "data_sent": {
+            "rate": 281.9941816983513,
+            "count": 42017
+        },
+        "http_req_tls_handshaking": {
+            "min": 0,
+            "med": 0,
+            "max": 89.6727,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.14053237623762377
+        },
+        "http_req_receiving": {
+            "med": 0,
+            "max": 9.7817,
+            "p(90)": 0.52578,
+            "p(95)": 1.095504999999997,
+            "avg": 0.20099405940594062,
+            "min": 0
+        },
+        "data_received": {
+            "count": 505505,
+            "rate": 3392.661751658259
+        },
+        "error_rate": {
+            "passes": 1000,
+            "fails": 0,
+            "thresholds": {
+                "rate<0.01": true
+            },
+            "value": 1
+        },
+        "total_requests": {
+            "count": 1000,
+            "rate": 6.711430651839763
+        },
+        "http_reqs": {
+            "count": 1010,
+            "rate": 6.77854495835816
+        },
+        "vus_max": {
+            "min": 1,
+            "max": 1,
+            "value": 1
+        },
+        "iteration_duration": {
+            "min": 130.8197,
+            "med": 140.43599999999998,
+            "max": 712.5467,
+            "p(90)": 143.84295,
+            "p(95)": 147.97987999999998,
+            "avg": 143.08674059999987
+        },
+        "vus": {
+            "max": 1,
+            "value": 1,
+            "min": 0
+        },
+        "checks": {
+            "passes": 1000,
+            "fails": 2000,
+            "value": 0.3333333333333333
+        },
+        "http_req_connecting": {
+            "avg": 0.07039079207920793,
+            "min": 0,
+            "med": 0,
+            "max": 36.4634,
+            "p(90)": 0,
+            "p(95)": 0
+        }
+    },
+    "setup_data": {
+        "startTime": 1778086976724
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "status is 200": {
+                    "name": "status is 200",
+                    "path": "::status is 200",
+                    "id": "6210a8cd14cd70477eba5c5e4cb3fb5f",
+                    "passes": 1000,
+                    "fails": 0
+                },
+                "response has data": {
+                    "passes": 0,
+                    "fails": 1000,
+                    "name": "response has data",
+                    "path": "::response has data",
+                    "id": "b3ae2ef92631fad2b4b40f55213052d8"
+                },
+                "not cold start": {
+                    "path": "::not cold start",
+                    "id": "aa495c32a02bcf2fe9b3f034727f8253",
+                    "passes": 0,
+                    "fails": 1000,
+                    "name": "not cold start"
+                }
+            }
+    }
+}

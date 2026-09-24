@@ -1,0 +1,48 @@
+# Dependencies and build outputs
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+.dev.vars
+*.pem
+vm-inventory.env
+
+# Provider state
+.vercel/
+.wrangler/
+.serverless/
+.aws-sam/
+
+# IDE and operating-system files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+
+# Local benchmark output. The published r1-revision dataset is retained.
+benchmark/results/*
+!benchmark/results/.gitkeep
+!benchmark/results/README.md
+!benchmark/results/r1-revision/
+!benchmark/results/r1-revision/**
+
+# Regenerable analysis output not included in the release
+benchmark/analysis/output/figures/
+benchmark/analysis/output/r1-tables/
+benchmark/analysis/output/statistical_analysis.json
+benchmark/analysis/output/statistical_report.txt
+benchmark/analysis/output/statistical_summary.csv
+benchmark/analysis/output/statistical_summary.tex
+
