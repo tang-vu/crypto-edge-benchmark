@@ -231,5 +231,12 @@ if __name__ == "__main__":
     base = sys.argv[1] if len(sys.argv) > 1 else "benchmark/results/r1-revision"
     df = ingest_revision_results(base)
     print(f"Loaded {len(df)} run files")
+    if df.empty:
+        sys.exit(
+            f"Error: no eligible run files found in {base!r}. "
+            "Use the input root containing "
+            "{client}/{cloudflare|vercel}/{warm|burst|cold}/*.json "
+            "(excluding *.summary.json), and check any load warnings above."
+        )
     print(df.groupby(["scenario", "client", "platform", "mode"]).size().to_string())
     print("\nCaveat:", get_us_east_caveat())
